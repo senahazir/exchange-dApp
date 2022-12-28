@@ -11,6 +11,7 @@ const App = () => {
   const[loading, pools] = usePools();
   
   return (
+    
   <div className = {styles.container}>
     <div className = {styles.innerContainer}>
       <header className = {styles.header}>
@@ -35,6 +36,7 @@ const App = () => {
         ) : <Loader title = "Please connect"/>
 
         }
+        
        </div>
        <div className="blue_gradient"/>
         </div>
