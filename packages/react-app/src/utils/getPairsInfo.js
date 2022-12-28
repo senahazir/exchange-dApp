@@ -17,8 +17,8 @@ export async function getPairsInfo(pairAddresses, web3) {
         const token0Contract = new web3.eth.Contract(tokenABI, token0Address);
         const token1Contract = new web3.eth.Contract(tokenABI, token1Address);
 
-        const token0Name = await token0Contract.methods.name.call();
-        const token1Name = await token1Contract.methods.name.call();
+        const token0Name = await token0Contract.methods.name().call();
+        const token1Name = await token1Contract.methods.name().call();
 
         pairsInfo.push({
             address : pairAddress,

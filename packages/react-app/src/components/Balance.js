@@ -3,7 +3,6 @@ import React from 'react'
 import styles from '../styles';
 
 const Balance = ({tokenBalance}) => {
-
     return (
         <div className={styles.balance}>
             <p className={styles.balanceText}>

@@ -16,7 +16,7 @@ import { parse } from 'qs';
  const Exchange = ({pools}) => {
   const {account} = useEthers();
   const [fromValue, setFromValue] = useState("0");
-  const [fromToken, setFromToken] = useState(pools[0].token0Address );
+  const [fromToken, setFromToken] = useState(pools[0].token0Address);
   const [toToken, setToToken] = useState("");
   const [resetState, setResetState] = useState(false);
 
@@ -98,13 +98,13 @@ import { parse } from 'qs';
   return (
     <div className='flex flex-col w-full items-center'>
       <div className='mb-8'>
-        <AmountIn
-        value = {fromValue}
-        onChange = {onFromValueChange}
-        currencyValue = {fromToken}
-        onSelect = {onFromTokenChange}
-        currencies = {availableTokens}
-        isSwapping = {isSwapping && hasEnoughBalance}
+      <AmountIn
+          value={fromValue}
+          onChange={onFromValueChange}
+          currencyValue={fromToken}
+          onSelect={onFromTokenChange}
+          currencies={availableTokens}
+          isSwapping={isSwapping && hasEnoughBalance}
         />
         <Balance tokenBalance={fromTokenBalance}/>
       </div>
